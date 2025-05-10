@@ -21,7 +21,12 @@ declare(strict_types=1);
 
 namespace SzepeViktor\WordPress\QueryMonitor\Ajax;
 
+use QM_Collectors;
 use QM_Plugin;
+
+require_once __DIR__.'/src/RequestData.php';
+require_once __DIR__.'/src/RequestCollector.php';
+require_once __DIR__.'/src/RequestOutput.php';
 
 add_filter(
     'qm/dispatchers',
@@ -31,6 +36,32 @@ add_filter(
 
         $dispatchers['html'] = new HtmlDump($qm);
         return $dispatchers;
+    },
+    10,
+    2
+);
+
+add_filter(
+    'qm/collectors',
+    static function (array $collectors): array
+    {
+        $collectors['request_vars'] = new RequestCollector();
+
+        return $collectors;
+    },
+    20,
+    1
+);
+
+add_filter(
+    'qm/outputter/html',
+    static function (array $output, QM_Collectors $collectors) {
+        $collector = QM_Collectors::get('request_vars');
+        if ($collector) {
+            $output['request_vars'] = new RequestOutput($collector);
+        }
+
+        return $output;
     },
     10,
     2

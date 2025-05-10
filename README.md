@@ -1,13 +1,13 @@
 # Query Monitor AJAX Dumper
 
-**Dump Query Monitor panles to an html file during AJAX requests**
+**Dump Query Monitor panels to an html file during AJAX requests**
 
 Dump files will be created as `wp-content/qm-*.html`
 
 ## Features
 
 - Displays all panels.
-- Show POST variables.
+- Show HTTP request variables for **GET and POST**.
 
 ## Installation
 

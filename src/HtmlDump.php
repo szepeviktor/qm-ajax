@@ -8,6 +8,7 @@ use QM_Plugin;
 use QM_Timer;
 use QM_Util;
 use WP_Admin_Bar;
+use WP_Http;
 
 class HtmlDump extends \QM_Dispatcher_Html {
 
@@ -134,6 +135,18 @@ class HtmlDump extends \QM_Dispatcher_Html {
         // Run for everyone
         // if ( ! self::user_can_view() ) {
         //     return false;
+        // }
+
+        // Run for users qith QM cookie
+        // if ( ! self::user_verified() ) {
+        //     return false;
+        // }
+
+        // Run for a certain IP address defined in QM_AJAX_IP_ADDRESS
+        // if (defined('QM_AJAX_IP_ADDRESS') && WP_Http::is_ip_address(QM_AJAX_IP_ADDRESS)) {
+        //     if (QM_AJAX_IP_ADDRESS !== $_SERVER['REMOTE_ADDR'] ?? '') {
+        //         return false;
+        //     }
         // }
 
         if ( ! self::request_supported() ) {

@@ -23,12 +23,12 @@ namespace SzepeViktor\WordPress\QueryMonitor\Ajax;
 
 use QM_Plugin;
 
-require_once WP_PLUGIN_DIR.'/query-monitor/dispatchers/Html.php';
-require_once __DIR__.'/src/HtmlDump.php';
-
 add_filter(
     'qm/dispatchers',
     static function (array $dispatchers, QM_Plugin $qm) {
+        // Needs query-monitor/dispatchers/Html.php loaded
+        require_once __DIR__.'/src/HtmlDump.php';
+
         $dispatchers['html'] = new HtmlDump($qm);
         return $dispatchers;
     },

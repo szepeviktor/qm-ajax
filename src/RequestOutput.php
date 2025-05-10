@@ -21,7 +21,7 @@ class RequestOutput extends \QM_Output_Html
 
     public function output(): void
     {
-        /** @var Collector $data */
+        /** @var array<string, string> $data */
         $data = $this->collector->get_data()->request_variables;
 
         $this->before_tabular_output();

@@ -137,7 +137,7 @@ class HtmlDump extends \QM_Dispatcher_Html {
         //     return false;
         // }
 
-        // Run for users qith QM cookie
+        // Run for users with QM cookie
         // if ( ! self::user_verified() ) {
         //     return false;
         // }

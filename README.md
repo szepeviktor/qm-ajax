@@ -11,7 +11,7 @@ Dump files will be created as `wp-content/qm-*.html`
 
 ## Installation
 
-1. Download [the plugin](https://github.com/szepeviktor/qm-opcache-ajax/archive/refs/heads/master.zip)
+1. Download [the plugin](https://github.com/szepeviktor/qm-ajax/archive/refs/heads/master.zip)
 2. Install it through the WordPress Plugins page or with WP-CLI
 3. Activate the plugin.
 

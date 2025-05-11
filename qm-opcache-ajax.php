@@ -5,7 +5,7 @@
  *
  * @wordpress-plugin
  * Plugin Name:       Query Monitor dumper for AJAX requests
- * Plugin URI:        https://github.com/szepeviktor/qm-opcache-ajax
+ * Plugin URI:        https://github.com/szepeviktor/qm-ajax
  * Description:       Dump HTML output to a file (wp-content/qm-*.html)
  * Version:           1.0.0
  * Requires at least: 6.0

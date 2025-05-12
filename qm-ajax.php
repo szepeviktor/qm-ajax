@@ -13,8 +13,8 @@
  * Requires Plugins:  query-monitor
  * Author:            Viktor Szépe
  * Author URI:        https://github.com/szepeviktor
- * License:           GPL v2 or later
- * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
+ * License:           MIT
+ * License URI:       https://opensource.org/license/mit
  */
 
 declare(strict_types=1);

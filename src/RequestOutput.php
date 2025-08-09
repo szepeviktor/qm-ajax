@@ -39,7 +39,7 @@ class RequestOutput extends \QM_Output_Html
             echo '<tr>';
             echo '<th scope="row"><code>';
             echo esc_html($name);
-            echo '<code></th>';
+            echo '</code></th>';
             echo '<td>';
             echo esc_html($value);
             echo '</td>';
